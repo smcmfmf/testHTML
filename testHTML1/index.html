@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>메인페이지</title>
+	<style type="text/css">
+		@font-face {font-family: 'GmarketSansBold';
+    		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    		font-weight: normal;
+    		font-style: normal;}
+		.upper{background-color: #000051;
+			color: white;
+			text-align: left;
+			align-content: center;
+			margin: 0px 20px;
+			margin-top: 0;
+			padding: 10px;
+			display: inline-flex;}
+		.logoimg{display: flex;
+			align-items: center;}
+		.copy{padding: 0px;
+			margin: 0px 30px;
+			font-size: 20px;
+			color: #74D36D;
+			text-align: right;
+			font-family: "GmarketSansBold";}
+		.imgs{color: white;
+			display: flex;
+			text-align: center;
+			justify-content: space-between;
+			margin: 2em 22em;}
+		.imgs > a{display: inline-block;
+			text-align: center;
+			font-size: 18px;
+			font-family: "GmarketSansBold";}
+		.imgs > a:link{text-decoration: none;
+			color: #1c69d4;}
+		.imgs > a:visited{color: #1c69d4;}
+		.imgs > a > img{font-size: 600px;
+			width: 300px;
+			height: 120px;}
+		body, html{background-color: #f5f3f3;
+			margin: 0;}
+		.list{display: inline-block;
+			padding-top: 20px;}
+		.list > a{padding: 20px;
+			margin: 0px 200px;
+			font-size: 24px;
+			color: white;
+			font-family: "GmarketSansBold";}
+		.list > a:link{text-decoration: none;
+			color: white;}
+		.list > a:visited{color: white;}
+		.menu{background-color: #000051;}
+		.video{display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin-top: 4px;}
+		.ani {transition: 0.1s;}
+		.ani:hover{font-size: 34px;}
+	</style>
+</head>
+<body>
+	<nav class="menu">
+		<div class="upper">
+			<a href="https://www.bmw.co.kr/ko/index.html" class="logoimg">
+				<img src="https://www.bmw.co.kr/etc.clientlibs/ds2-webcomponents/clientlibs/clientlib/resources/img/BMW_White_Logo.svg" width="80px" height="80px"></img>
+			</a>
+			<div class="list">
+				<a href="alpha1.html">찾아오시는 길</a>
+				<a href="alpha2.html">딜러사 주가</a>
+				<a href="alpha3.html" class="fix">구매하기</a>
+			</div>
+		</div>
+	</nav>
+	<div class="video" >
+		<video src="imgs/cf.mp4" width="100%" height="580" autoplay loop muted></video>
+	</div>
+	<div class="imgs">
+		<a href="https://www.bmw.co.kr/ko/all-models/5-series/sedan/2020/bmw-the5-highlights.html" style="float: left;">
+			<span class="ani">
+				<img src="imgs/THE5.png"></img>
+				<br>BMW 5 Series</a>
+			</span>
+		<a href="https://www.bmw.co.kr/ko/all-models/7-series/sedan/2022/bmw-7-series-sedan-highlights.html" style="float: right;">
+			<span class="ani">
+				<img src="imgs/THE7.png"></img>
+				<br>BMW 7 Series</a>
+			</span>
+		<a href="https://www.bmw.co.kr/ko/all-models/m-series/i4-m50/2021/bmw-i4-m50-highlights.html">
+			<span class="ani">
+				<img src="imgs/i4 M450.png"></img>
+				<br>BMW i4 M450</a>
+			</span>
+		<a href="https://www.bmw.co.kr/ko/all-models/bmw-i/bmw-ix/2021/bmw-ix.html">		
+			<span class="ani">
+				<img src="imgs/iX.png"></img>
+				<br>BMW iX</a>
+			</span>
+	</div>
+	<div class="copy"> <!-- position으로  -->
+		<h4 style="position: absolute; bottom: 0; right: 20px;">&copy;copyright smcmfmf</h4>
+	</div>
+</body>
+</html>

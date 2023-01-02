@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>동대문 전시장 (도이치모터스)</title>
+	<style type="text/css">
+		@font-face {
+			font-family: 'GmarketSansBold';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		html, body{margin: 0px;
+			padding: 0px;
+			height: 100%;
+			background-color: floralwhite;}
+		.top{
+			width: 100%;
+			height: 5%;
+			margin: 0px;
+			padding: 0px;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			background-color: #000051;
+			font-family: 'GmarketSansBold';}
+		#map_section{
+			width: 150px;
+			display: flex;
+		}
+		h3{
+			color: white;
+			font-family: 'GmarketSansBold';
+			font-size: 22px;
+
+		}
+		button{
+			font-family: 'GmarketSansBold';
+			text-decoration: none;
+			color: rgba(37, 201, 201, 0.863);
+			font-size: 22px;
+		}
+		a{
+			font-family: 'GmarketSansBold';
+			text-decoration: none;
+			font-size: 22px;
+			color: rgb(238, 167, 75);
+		}
+		#main{height: 95%;
+			width: 100%;
+			margin-bottom: 0px;}
+		.map{text-align: center;
+			border-radius: 40px;}
+	</style>
+	<script>
+		let first = 1;
+		function changeOn(){
+			let frame = document.getElementById('main');
+			let name = document.getElementById('map_name');
+
+			if(first == 0){
+				frame.innerHTML = '<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d813.8207810102589!2d127.0564432046323!3d37.564214694603194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca4b4a27acd5b%3A0x159a35fde89fc196!2z7ISc7Jq47Yq567OE7IucIOuPmeuMgOusuOq1rCDsspztmLjrjIDroZwgMzI5!5e0!3m2!1sko!2skr!4v1650598532954!5m2!1sko!2skr" width="100%" height="95%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+				name.innerText = '구글 지도';
+				first = 1;
+			}
+
+			else if(first == 1){
+				frame.innerHTML = '<iframe id="map" src="http://kko.to/xcj1JBXWp" width="100%" height="95%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" width="100%" height="95%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>';
+				name.innerText = '카카오 지도';
+				first = 0;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="top">
+		<div id="map_section">
+			<h3 id="map_name">구글 지도</h3><br> <!-- 각 객체 간의 간극 조정 -->
+		</div>
+		<button onclick="changeOn()">전환</button>
+		<button><a href="index.html">메인</a></button>
+	</div>
+	<div id="main">
+		<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d813.8207810102589!2d127.0564432046323!3d37.564214694603194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca4b4a27acd5b%3A0x159a35fde89fc196!2z7ISc7Jq47Yq567OE7IucIOuPmeuMgOusuOq1rCDsspztmLjrjIDroZwgMzI5!5e0!3m2!1sko!2skr!4v1650598532954!5m2!1sko!2skr" width="100%" height="95%" style="border:0; margin-bottom: 0px;" allowfullscreen="1" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+</body>
+</html>

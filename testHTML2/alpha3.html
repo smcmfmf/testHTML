@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>옵션 선택</title>
+	<style type="text/css">
+		@font-face{font-family: 'GmarketSansBold';
+    		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    		font-weight: normal;
+    		font-style: normal;}
+		body{background-color: #000051;
+			text-align: center;}
+		img{width: 120px;
+			height: 120px;
+			margin: 20px;
+			padding: 10px;}
+		.font{font-family: "GmarketSansBold";
+			display: inline-block;}
+		.survey{background-color: #FFFFE5;
+			margin: 40px 640px;
+			margin-top: 20px;
+			padding: 20px;
+			border-radius: 100px;
+			display: flex;
+			justify-content: space-around;
+			font-family: "GmarketSansBold";}
+		.link{text-decoration: none;
+			font-size: 22px;
+			color: #A1FF98;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;}
+		input:hover{background-color: #FFFFAF;}
+		select:hover{background-color: #D6FFFF;}
+		a:hover{color: #FFCC97;}
+		.sub{
+			width: 480px;
+			height: 120px;
+			display: inline-flex;
+			border-radius: 80px;
+			margin: 0px;
+			}
+		#sen{
+			width: 130px;
+			height: 40px;
+			font-family: "GmarketSansBold";
+			border-radius: 60px;
+		}
+		#img{
+			width: 280px;
+			height: 110px;
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script type="text/javascript">
+		function imageSwitch(){
+			let sen = document.getElementById("sen");
+			let img = document.getElementById("img");
+			img.src = sen.options[sen.selectedIndex].value;
+		}	
+		function find(){ /* 차종 */
+			let gap = null;
+			let cars = document.getElementsByName("car");
+			for (let i = 0; i < cars.length; i++){
+				if (cars[i].selected == true){
+					gap = cars[i];
+				}
+			}
+			let hap = null; /* 용도 */
+			let why = document.getElementsByName("why"); 
+			for (let i = 0; i < why.length; i++){
+				if (why[i].checked == true){
+					hap = why[i]; 
+				}
+			}
+			let color = null; /* 색상 */
+			let who = document.getElementsByName("color"); 
+			for (let i = 0; i < who.length; i++){
+				if (who[i].selected == true){
+					color = who[i]; 
+				}
+			}
+			if (gap != null && hap != null && color != null){
+				con = confirm("차종 : " + gap.value + "\n색상 : " + color.value + "\n용도 : " + hap.value + "\n\n위 선택 사항이 맞습니까?");
+				if (con == false){
+					return false;
+				}
+			}
+			else {
+				alert("이용 목적을 선택하십시오!"); /* 다음 페이지로 안 넘어가게 */
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<img src="https://www.bmw.co.kr/etc.clientlibs/ds2-webcomponents/clientlibs/clientlib/resources/img/BMW_White_Logo.svg">
+	</div>
+	<div class="sub">
+		<img src="imgs/iX.png" id="img">
+		<select id="sen" onchange="imageSwitch()">
+			<option value="imgs/iX.png" selected>BMW iX</option>
+			<option value="imgs/i4 M450.png">BMW i4 M450</option>
+			<option value="imgs/THE5.png">BMW 5 Series</option>
+			<option value="imgs/THE7.png">BMW 7 Series</option>
+		</select>
+	</div>
+	<div class="survey">
+		<form>
+			<h2>원하시는 모델을 선택하세요.</h2>
+				<select class="font" name="car">
+					<option class="font" name="car" value="BMW iX">BMW iX</option>
+					<option class="font" name="car" value="BMW i4 M450">BMW i4 M450</option>
+					<option class="font" name="car" value="BMW 5 Series">BMW 5 Series</option>
+					<option class="font" name="car" value="BMW 7 Series">BMW 7 Series</option>
+				</select><br>
+			<h2>색상을 선택하세요.</h2>
+				<select class="font" name="color">
+					<option class="font" name="color" value="white">white</option>
+					<option class="font" name="color" value="black">black</option>
+					<option class="font" name="color" value="silver">silver</option>
+					<option class="font" name="color" value="blue">blue</option>
+					<option class="font" name="color" value="red">red</option>
+				</select><br>
+			<h2>이용 목적을 선택하세요.</h2>
+				<input class="font" type="radio" name="why" value="개인">개인
+				<input class="font" type="radio" name="why" value="영업">영업
+				<input class="font" type="radio" name="why" value="법인">법인
+			<h2>차량을 인도 받으실 날짜를 선택하세요.</h2>
+				<input class="font" type="week" value="2022.w16"><br><br>
+				<a class="link" href="alpha4.html"><h2 onclick="return find()" style="border: 1px solid #abc543; border-radius: 60px; padding: 10px 10px 7px 10px; background-color: #7EB1FF; width: 280px; height: 50px;">정보 입력하러 가기</h2></a>
+		</form>
+	</div>
+</body>
+</html>

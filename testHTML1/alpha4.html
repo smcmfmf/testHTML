@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>고객 정보 입력</title>
+	<style type="text/css">
+		@font-face{font-family: 'GmarketSansBold';
+    		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    		font-weight: normal;
+    		font-style: normal;}
+    	img{width: 120px;
+			height: 120px;
+			margin: 20px;
+			padding: 10px;}
+		body{background-color: #000051;
+			text-align: center;}
+		.font1{font-family: "GmarketSansBold";
+			width: 20%;
+			height: 100%;
+			font-style: 18px;
+			/*border-radius: 20px;*/}
+		.consumer{background-color: #FFFFE5;
+			margin: 40px 640px;
+			margin-top: 20px;
+			padding: 30px;
+			font-family: "GmarketSansBold";
+			border-radius: 100px;}
+		input:hover{background-color: #FF97DC;}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="https://www.bmw.co.kr/etc.clientlibs/ds2-webcomponents/clientlibs/clientlib/resources/img/BMW_White_Logo.svg">
+	</div>
+	<form class="consumer" action="./alpha5.html">
+			<h3>고객 정보</h3>
+				<h2>성함을 입력하세요.</h2><input class="font" type="name" placeholder="홍길동"><br><br>
+				<h2>전화번호를 입력하세요.</h2><input  class="font" type="tel" placeholder="010-1234-5678"><br><br>
+				<h2>이메일을 입력하세요.</h2><input class="font" type="email" placeholder="bmw@email.com"><br><br>
+			<input class="font1" type="submit" value="완료">
+	</form>
+</body>
+</html>

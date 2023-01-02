@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>메인페이지</title>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<style type="text/css">
+		html,
+		body {
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+
+		body {
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color: #000;
+			margin: 0;
+			padding: 0;
+			background-color: rgba(216, 210, 210, 0.89);
+		}
+
+		@font-face {
+			font-family: 'GmarketSansBold';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		.upper {
+			width: 80%;
+			background-color: #000051;
+			color: white;
+			text-align: left;
+			align-content: center;
+			display: flex;
+			height: 100%;
+			justify-content: space-between;
+
+		}
+
+		.logoimg {
+			display: flex;
+			align-items: center;
+			float: left;
+		}
+
+		.copy {
+			padding: 0px;
+			margin: 0px 30px;
+			font-size: 20px;
+			color: #74D36D;
+			text-align: right;
+			font-family: "GmarketSansBold";
+		}
+
+		.imgs {
+			color: white;
+			display: flex;
+			text-align: center;
+			justify-content: space-between;
+			margin: 2em 22em;
+		}
+
+		.imgs>a {
+			display: inline-block;
+			text-align: center;
+			font-size: 18px;
+			font-family: "GmarketSansBold";
+		}
+
+		.imgs>a:link {
+			text-decoration: none;
+			color: #1c69d4;
+		}
+
+		.imgs>a:visited {
+			color: #1c69d4;
+		}
+
+		.imgs>a>img {
+			font-size: 600px;
+			width: 300px;
+			height: 120px;
+		}
+
+		body,
+		html {
+			background-color: #f5f3f3;
+			margin: 0;
+		}
+
+		.list {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.list > div{
+			width: 440px;
+			height: 100px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.list a {
+			margin: 0px 100px;
+			font-size: 24px;
+			color: white;
+			font-family: "GmarketSansBold";
+		}
+
+		.list > a:link {
+			text-decoration: none;
+			color: white;
+		}
+
+		.list > a:visited {
+			color: white;
+		}
+
+		.menu {
+			background-color: #000051;
+			height: 110px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.video {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin-top: 4px;
+		}
+
+		.ani {
+			display: flex;
+			justify-content: center;
+			flex-flow: row wrap;
+			align-items: center;
+			text-align: center;
+			transition: 0.1s;
+		}
+
+		.ani:hover {
+			font-size: 30px;
+		}
+
+		a {
+			font-family: "GmarketSansBold";
+			font-size: 20px;
+			color: #1c69d4;
+			text-decoration: none;
+		}
+
+		.swiper {
+			border-radius: 30px;
+			margin-top: 0px;
+			width: 1000px;
+			height: 220px;
+		}
+
+		.swiper-slide {
+			text-align: center;
+			font-size: 20px;
+			background: #f5f3f3;
+
+			/* Center slide text vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+
+		.swiper-slide img {
+			display: inline-block;
+			width: 80%;
+			height: 40%;
+			object-fit: cover;
+		}
+	</style>
+	<script>
+		function change1() {
+			document.getElementById("videoBox").innerHTML =
+				"<iframe src='https://www.bmw.co.kr/ko/all-models/5-series/sedan/2020/bmw-the5-highlights.html' width='80%' height='600'></iframe>";
+		}
+
+		function change2() {
+			document.getElementById("videoBox").innerHTML =
+				"<iframe src='https://www.bmw.co.kr/ko/all-models/7-series/sedan/2022/bmw-7-series-sedan-highlights.html' width='80%' height='600'></iframe>";
+		}
+
+		function change3() {
+			document.getElementById("videoBox").innerHTML =
+				"<iframe src='https://www.bmw.co.kr/ko/all-models/m-series/i4-m50/2021/bmw-i4-m50-highlights.html' width='80%' height='600'></iframe>";
+		}
+
+		function change4() {
+			document.getElementById("videoBox").innerHTML =
+				"<iframe src='https://www.bmw.co.kr/ko/all-models/bmw-i/bmw-ix/2021/bmw-ix.html' width='80%' height='600'></iframe>";
+		}
+
+		function over(obj) {
+			obj.style.backgroundColor = "#6B66FF";
+			obj.style.fontSize = "36px";
+			obj.style.trasform = 'scale('
+		}
+
+		function out(obj) {
+			obj.style.backgroundColor = "#000051";
+			obj.style.fontSize = "24px";
+		}
+
+	</script>
+</head>
+<body>
+	<nav class="menu">
+		<div class="upper">
+			<a href="https://www.bmw.co.kr/ko/index.html" class="logoimg">
+				<img src="https://www.bmw.co.kr/etc.clientlibs/ds2-webcomponents/clientlibs/clientlib/resources/img/BMW_White_Logo.svg"
+					width="80px" height="80px"></img>
+			</a>
+			<div class="list">
+				<div>
+					<a id="color1" href="alpha1.html" onmouseover="over(this)" onmouseout="out(this)">찾아오시는 길</a>
+				</div>
+				<div>
+					<a id="color2" href="alpha2.html" onmouseover="over(this)" onmouseout="out(this)" onclick="return warning()">딜러사 주가</a>
+				</div>
+				<div>
+					<a id="color3" href="alpha3.html" onmouseover="over(this)" onmouseout="out(this)">구매하기</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="video" id="videoBox">
+		<video src="imgs/cf.mp4" width="100%" height="600" autoplay loop muted></video>
+	</div>
+	<!-- Swiper -->
+	<div class="swiper mySwiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<a href="javascript:change4()">
+					<span class="ani">
+						<img src="imgs/iX.png"></img>
+						BMW iX
+					</span>
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="javascript:change3()">
+					<span class="ani">
+						<img src="imgs/i4 M450.png"></img>
+						BMW i4 M450
+					</span>
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="javascript:change2()" style="float: right;">
+					<span class="ani">
+						<img src="imgs/THE7.png"></img>
+						BMW 7 Series
+					</span>
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="javascript:change1()" style="float: left;">
+					<span class="ani">
+						<img src="imgs/THE5.png"></img>
+						BMW 5 Series
+					</span>
+				</a>
+			</div>
+		</div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<div class="copy">
+		<!-- position으로  -->
+		<h4 style="position: absolute; bottom: 0; right: 20px;">&copy;&nbsp;copyright smcmfmf</h4>
+	</div>
+
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			spaceBetween: 30,
+			centeredSlides: true,
+			// autoplay: {
+			// 	delay: 2500,
+			// 	disableOnInteraction: false,
+			// },
+			loop: true,
+			autoplay: true,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+		});
+		function warning(){
+			let result = confirm("연령 확인이 필요합니다. 만 18세 이상이십니까?");
+			return result;
+		}
+	</script>
+</body>
+</html>

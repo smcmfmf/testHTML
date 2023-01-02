@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>주문 완료</title>
+	<style type="text/css">
+		@font-face{font-family: 'GmarketSansBold';
+    		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    		font-weight: normal;
+    		font-style: normal;}
+    	img{width: 120px;
+			height: 120px;
+			margin: 20px;
+			padding: 10px;}
+		body{background-color: #000051;
+			text-align: center;}
+		span{font-family: "GmarketSansBold";
+			font-size: 46px;
+			color: #B3E148;}
+		.font{font-family: "GmarketSansBold";
+			font-size: 46px;}
+		.sub{font-family: "GmarketSansBold";
+			font-size: 24px;
+			color: #FFC0FF;}
+		.submit{background-color: #FFFFE5;
+			margin: 40px 640px;
+			margin-top: 20px;
+			padding: 20px;
+			font-family: "GmarketSansBold";
+			border-radius: 100px;}
+		.link{
+			color: #75BC00;
+			background-color: #C8FFFF;
+			font-size: 18px;
+			font-weight: bolder;
+			font-family: "GmarketSansBold";
+			border-color: #C8FFFF;
+			width: 20%;
+			height: 100%;}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="https://www.bmw.co.kr/etc.clientlibs/ds2-webcomponents/clientlibs/clientlib/resources/img/BMW_White_Logo.svg">
+	</div>
+	<form class="submit" action="./index.html">
+		<h3 class="font">주문사항이 <span>저장</span>되었습니다.</h3>
+		<h4 class="sub">추후 배송일자가 안내될 예정입니다.</h4>
+		<input class="link" type="submit" value="메인으로" onclick="return thanks()">
+	</form>
+	<script type="text/javascript">
+		function thanks(){
+			let result = confirm("메인으로 이동하시겠습니까?"); // 취소 버튼을 눌렀을 때 alert 으로 경고
+			if(result == false){
+				alert("취소 버튼을 클릭하셔서 이동하지 않았습니다."); // 버튼을 눌렀을 때 전환 효과
+			}
+			return result;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>실시간 주가</title>
+	<style type="text/css">
+		@font-face{font-family: 'GmarketSansBold';
+    		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    		font-weight: normal;
+    		font-style: normal;}
+    	* {margin: 0;
+    		margin-right: 0;}
+		h2{justify-content: space-evenly;
+			align-items: flex-start;
+			color: white;
+			margin: 0px;
+			padding: 10px;
+			display: flex;}
+		span{color: #6799FF;}
+		.font{font-family: "GmarketSansBold";}
+		.naver{padding: 0px;
+			text-align: center;
+			background-color: white;
+			width: 100%;
+			height: 1000px;}
+		body{background-color: black;}
+		a{color: white;
+			text-decoration: none;}
+		p{
+			width: 40px;
+			height: 30px;
+			margin: 0;
+			color: white;
+		}
+		button{
+			width: 100px;
+			height: 40px;
+			font-family: 'GmarketSansBold';
+			font-size: 22px;
+			color: rgb(238, 230, 230);
+			background-color: rgb(23, 219, 170);
+		}
+	</style>
+	<script type="text/javascript">
+		let nowIframe = 1;
+		function iframeChange(){
+			let frame = document.getElementById('frame');
+
+			if(nowIframe == 0){
+				frame.innerHTML = '<iframe class="naver" src="https://finance.naver.com/item/main.naver?code=067990" frameborder="0"></iframe>';
+				nowIframe = 1;
+			}
+
+			else if(nowIframe == 1){
+				frame.innerHTML = '<iframe class="naver" src="http://vip.mk.co.kr/newSt/price/price.php?stCode=067990" frameborder="0"></iframe>';
+				nowIframe = 0;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2 class="font">
+		<span>BMW 공식 딜러사&nbsp;(도이치모터스)</span>
+		<a href="index.html">메인 버튼</a>
+		<button onclick="iframeChange()">전환</button>
+	</h2>
+	<div id="frame">
+		<iframe class="naver" src="https://finance.naver.com/item/main.naver?code=067990" frameborder="0"></iframe>
+	</div>
+</body>
+</html>

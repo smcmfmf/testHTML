@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>옵션 선택</title>
+	<style type="text/css">
+		@font-face{font-family: 'GmarketSansBold';
+    		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    		font-weight: normal;
+    		font-style: normal;}
+		body{background-color: #000051;
+			text-align: center;}
+		img{width: 120px;
+			height: 120px;
+			margin: 20px;
+			padding: 10px;}
+		.font{font-family: "GmarketSansBold";}
+		.survey{background-color: #FFFFE5;
+			margin: 40px 640px;
+			margin-top: 20px;
+			padding: 20px;
+			border-radius: 100px;
+			font-family: "GmarketSansBold";}
+		.link{text-decoration: none;
+			color: #A1FF98;}
+		input:hover{background-color: #FFFFAF;}
+		select:hover{background-color: #D6FFFF;}
+		a:hover{color: #FFCC97;}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="https://www.bmw.co.kr/etc.clientlibs/ds2-webcomponents/clientlibs/clientlib/resources/img/BMW_White_Logo.svg">
+	</div>
+	<form class="survey">
+	<h2>원하시는 모델을 선택하세요.</h2>
+		<select class="font" name="car">
+			<option class="font" value="BMW 5 Series">BMW 5 Series</option>
+			<option class="font" value="BMW 7 Series">BMW 7 Series</option>
+			<option class="font" value="BMW i4 M450">BMW i4 M450</option>
+			<option class="font" value="BMW iX">BMW iX</option>
+		</select><br>
+	<h2>색상을 선택하세요.</h2>
+		<input class="font" type="text" list="color">
+		<datalist id="color">
+			<option class="font" value="white">white</option>
+			<option class="font" value="black">black</option>
+			<option class="font" value="silver">silver</option>
+			<option class="font" value="blue">blue</option>
+			<option class="font" value="red">red</option>
+		</datalist><br>
+	<h2>이용 목적을 선택하세요.</h2>
+		<input class="font" type="radio" name="용도" value="개인">개인
+		<input class="font" type="radio" name="용도" value="영업">영업
+		<input class="font" type="radio" name="용도" value="법인">법인
+	<h2>차량을 인도 받으실 날짜를 선택하세요.</h2>
+		<input class="font" type="week" value="2022.w16"><br><br>
+		<h2><a class="link" href="alpha4.html" style="border: 1px solid #abc543; border-radius: 100px; padding: 10px 10px 7px 10px; background-color: #7EB1FF;">정보 입력하러 가기</a></h2>
+	</form>
+</body>
+</html>
